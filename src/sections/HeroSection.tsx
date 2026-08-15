@@ -1,61 +1,35 @@
-import Button from '../components/Button';
+import { MeasurementGuide } from "../components/calculator/MeasurementGuide";
 
-function HeroSection() {
+export function HeroSection() {
   return (
-    <section id="home" className="bg-white">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center lg:py-32">
+    <section
+      id="top"
+      className="relative px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-20 lg:pb-20 lg:pt-24"
+    >
+      <div className="absolute -right-32 top-10 size-96 rounded-full bg-emerald-100/60 blur-3xl" />
+      <div className="absolute -left-32 bottom-0 size-72 rounded-full bg-amber-100/40 blur-3xl" />
+      <div className="relative mx-auto grid max-w-7xl items-end gap-10 lg:grid-cols-2">
         <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-blue-600">
-            Modern frontend website
-          </p>
-
-          <h1 className="text-5xl font-bold tracking-tight text-slate-950 sm:text-6xl">
-            Build a clean, fast website with Vite, React, TypeScript, and Tailwind.
+          <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-none tracking-tighter text-emerald-950 sm:text-6xl lg:text-7xl xl:text-8xl">
+            The right liner, <span className="text-amber-600">first try.</span>
           </h1>
-
-          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-            This boilerplate gives you a simple structure with reusable components,
-            page sections, a layout wrapper, and responsive Tailwind styling.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-500 sm:text-xl">
+            Measure your litter box once. We’ll match its dimensions to the
+            AlfaPet cat pan liner made to fit. This means there’s less guessing and fewer
+            returns.
           </p>
-
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="#contact">
-              <Button>
-                Contact Us
-              </Button>
-            </a>
-
-            <a href="#services">
-              <Button variant="secondary">
-                View Services
-              </Button>
-            </a>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <p className="text-sm font-medium text-stone-500">
+              Takes about 60 seconds · Measurements in inches
+            </p>
           </div>
         </div>
-
-        <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-          <div className="aspect-video rounded-2xl bg-gradient-to-br from-slate-200 to-slate-100" />
-
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl bg-white p-4 shadow-sm">
-              <p className="text-2xl font-bold text-slate-950">Fast</p>
-              <p className="mt-1 text-sm text-slate-600">Vite-powered setup</p>
-            </div>
-
-            <div className="rounded-2xl bg-white p-4 shadow-sm">
-              <p className="text-2xl font-bold text-slate-950">Typed</p>
-              <p className="mt-1 text-sm text-slate-600">TypeScript components</p>
-            </div>
-
-            <div className="rounded-2xl bg-white p-4 shadow-sm">
-              <p className="text-2xl font-bold text-slate-950">Clean</p>
-              <p className="mt-1 text-sm text-slate-600">Tailwind styling</p>
-            </div>
+        <div className="hidden lg:block">
+          <div className="relative ml-auto max-w-md rounded-4xl border border-white bg-white/70 p-4 shadow-xl backdrop-blur">
+            <MeasurementGuide compact />
           </div>
         </div>
       </div>
     </section>
   );
 }
-
-export default HeroSection;

@@ -1,75 +1,60 @@
-# React + TypeScript + Vite
+# AlfaPet Liner Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean React, TypeScript, Tailwind CSS, and Vite rebuild of the AlfaPet cat
+pan liner calculator.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Use `npm run build` for a production build and `npm run lint` to lint the
+project.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Source structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+├── components/
+│   ├── calculator/
+│   │   ├── CalculatorResult.tsx
+│   │   ├── LinerCalculator.tsx
+│   │   ├── MeasurementForm.tsx
+│   │   └── MeasurementGuide.tsx
+│   ├── product/
+│   │   └── ProductCard.tsx
+│   └── ui/
+│       └── ArrowUpRightIcon.tsx
+├── data/
+│   ├── measurementFields.ts
+│   └── products.ts
+├── lib/
+│   └── catPanCalculator.ts
+├── pages/
+│   └── HomePage.tsx
+├── sections/
+│   ├── HeroSection.tsx
+│   ├── ProductsSection.tsx
+│   ├── SiteFooter.tsx
+│   └── SiteHeader.tsx
+├── styles/
+│   └── index.css
+├── types/
+│   └── product.ts
+├── App.tsx
+└── main.tsx
 ```
+
+`src/App.tsx` only mounts `HomePage`. The calculator behavior converted from
+the original JavaScript lives separately in `src/lib/catPanCalculator.ts`.
+
+## Calculation
+
+```text
+required length = box length + front wall + back wall
+required width  = box width + left wall + right wall
+```
+
+The original product thresholds and retailer links are preserved.
