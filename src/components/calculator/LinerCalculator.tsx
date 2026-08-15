@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from "react";
 import type { FormEvent } from "react";
+
 import {
   calculateLinerFit,
   validateMeasurements,
@@ -13,7 +14,6 @@ import type {
 import { CalculatorResult } from "./CalculatorResult";
 import { MeasurementForm } from "./MeasurementForm";
 import type { MeasurementValues } from "./MeasurementForm";
-import { MeasurementGuide } from "./MeasurementGuide";
 
 const emptyMeasurements: MeasurementValues = {
   length: "",
@@ -91,12 +91,11 @@ export function LinerCalculator() {
               the inside floor to the top edge.
             </p>
             <div className="relative mt-8 rounded-3xl bg-white p-2 shadow-2xl shadow-black/20 sm:p-3">
-              <MeasurementGuide />
-            </div>
-            <div className="relative mt-7 grid grid-cols-3 gap-3 text-center text-xs font-semibold uppercase tracking-widest text-white/55">
-              <span>Measure</span>
-              <span>Match</span>
-              <span>Shop</span>
+              <img
+                src="/images/measure.png"
+                alt="Diagram showing the six litter box measurements"
+                className="block h-auto w-full rounded-2xl"
+              />
             </div>
           </div>
 

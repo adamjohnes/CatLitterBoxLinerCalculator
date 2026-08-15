@@ -1,5 +1,3 @@
-import { MeasurementGuide } from "../components/calculator/MeasurementGuide";
-
 export function HeroSection() {
   return (
     <section
@@ -22,11 +20,6 @@ export function HeroSection() {
             <p className="text-sm font-medium text-stone-500">
               Takes about 60 seconds · Measurements in inches
             </p>
-          </div>
-        </div>
-        <div className="hidden lg:block">
-          <div className="relative ml-auto max-w-md rounded-4xl border border-white bg-white/70 p-4 shadow-xl backdrop-blur">
-            <MeasurementGuide compact />
           </div>
         </div>
       </div>
