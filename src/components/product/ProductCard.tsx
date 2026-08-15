@@ -8,13 +8,14 @@ export function ProductCard({ productId }: { productId: ProductId }) {
   return (
     <article className="group flex min-h-96 flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-6">
       <div className="relative flex min-h-56 flex-1 items-center justify-center overflow-hidden rounded-2xl bg-stone-100 p-6">
-        <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-800 shadow-sm">
+        <span className="absolute left-4 top-4 z-10 rounded-full bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-800 shadow-sm">
           {product.retailer}
         </span>
+
         <img
           src={product.image}
           alt={`${product.name} AlfaPet cat pan liner package`}
-          className="h-48 w-full object-contain transition duration-300 group-hover:scale-105"
+          className="relative z-0 h-48 w-full object-contain transition duration-300 group-hover:scale-105"
         />
       </div>
       <div className="flex items-end justify-between gap-4 pt-5">
