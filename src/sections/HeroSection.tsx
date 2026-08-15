@@ -6,7 +6,7 @@ export function HeroSection() {
     >
       <div className="absolute -right-32 top-10 size-96 rounded-full bg-emerald-100/60 blur-3xl" />
       <div className="absolute -left-32 bottom-0 size-72 rounded-full bg-amber-100/40 blur-3xl" />
-      <div className="relative mx-auto grid max-w-7xl items-end gap-10 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-7xl items-end gap-10">
         <div>
           <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-none tracking-tighter text-emerald-950 sm:text-6xl lg:text-7xl xl:text-8xl">
             The right liner, <span className="text-amber-600">first try.</span>
