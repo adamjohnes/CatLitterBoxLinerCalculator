@@ -25,8 +25,7 @@ export function ProductsSection() {
           ))}
         </div>
         <p className="mt-6 text-sm leading-6 text-stone-500">
-          Retailer links and availability may change. Each link opens the product
-          listing supplied by the original calculator.
+          Retailer links and availability may change.
         </p>
       </div>
     </section>
