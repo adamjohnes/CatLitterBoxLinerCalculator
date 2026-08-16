@@ -18,7 +18,7 @@ export function HeroSection() {
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <p className="text-sm font-medium text-stone-500">
-              Takes about 60 seconds · Measurements in inches
+              Takes about 60 seconds
             </p>
           </div>
         </div>
