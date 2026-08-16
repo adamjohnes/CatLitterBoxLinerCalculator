@@ -84,7 +84,7 @@ export function LinerCalculator() {
               Step 1 · Measure
             </p>
             <h2 className="relative mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Six quick measurements.
+              Six quick measurements
             </h2>
             <p className="relative mt-4 max-w-md leading-7 text-white/70">
               Measure the litter box in inches. For the four walls, measure from
@@ -104,10 +104,10 @@ export function LinerCalculator() {
               Step 2 · Enter dimensions
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-emerald-950 sm:text-4xl">
-              Find your liner size.
+              Find your liner size
             </h2>
             <p className="mt-3 max-w-2xl leading-7 text-stone-500">
-              Decimals are welcome. Every field is required.
+              Every field is required.
             </p>
 
             <MeasurementForm

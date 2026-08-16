@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="relative mx-auto grid max-w-7xl items-end gap-10">
         <div>
           <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-none tracking-tighter text-emerald-950 sm:text-6xl lg:text-7xl xl:text-8xl">
-            The right liner, <span className="text-amber-600">first try.</span>
+            The right liner, <span className="text-amber-600">first try</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-500 sm:text-xl">
             Measure your litter box once. We’ll match its dimensions to the

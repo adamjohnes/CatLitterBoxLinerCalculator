@@ -12,11 +12,16 @@ export function ProductCard({ productId }: { productId: ProductId }) {
           {product.retailer}
         </span>
 
-        <img
-          src={product.image}
-          alt={`${product.name} AlfaPet cat pan liner package`}
-          className="relative z-0 h-48 w-full object-contain transition duration-300 group-hover:scale-105"
-        />
+        <a href={product.href}
+           target="_blank"
+           rel="noreferrer"
+        >
+          <img
+            src={product.image}
+            alt={`${product.name} AlfaPet cat pan liner package`}
+            className="relative z-0 h-48 w-full object-contain transition duration-300 group-hover:scale-105"
+          />
+        </a>
       </div>
       <div className="flex items-end justify-between gap-4 pt-5">
         <div>
