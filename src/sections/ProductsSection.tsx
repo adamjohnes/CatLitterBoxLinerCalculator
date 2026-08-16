@@ -14,7 +14,7 @@ export function ProductsSection() {
               Shop For AlfaPet liners
             </p>
             <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tighter text-emerald-950 sm:text-5xl">
-              Find the liner that fits your cats' needs
+              Find the liner that fits your cat needs
             </h2>
           </div>
         </div>
